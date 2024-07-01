@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="author" content="SSAAKK">
+    <meta name="robots" content="index,follow">
+    <base target="_self">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        table, tr, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>成功新增學生!</h1>
+    <p>以下為新增的學生資料:</p>
+    <table>
+        <tr>
+            <td>學生ID</td>
+            <td><%= saveStudent.id %></td>
+        </tr>
+        <tr>
+            <td>姓名</td>
+            <td><%= saveStudent.name %></td>
+        </tr>
+        <tr>
+            <td>年齡</td>
+            <td><%= saveStudent.age %></td>
+        </tr>
+        <tr>
+            <td>學科</td>
+            <td><%= saveStudent.major %></td>
+        </tr>
+        <tr>
+            <td>merit獎學金</td>
+            <td><%= saveStudent.schlarship.merit %></td>
+        </tr>
+        <tr>
+            <td>other獎學金</td>
+            <td><%= saveStudent.schlarship.other %></td>
+        </tr>
+    </table>
+    <a href="/students">Home Page</a>
+</body>
+<script src="./app.js"></script>
+</html>

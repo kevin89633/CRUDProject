@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增學生</title>
+    <meta name="author" content="SSAAKK">
+    <meta name="robots" content="index,follow">
+    <base target="_self">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="/students" method="post">
+        <label for="name">姓名: </label>
+        <input type="text" name="name">
+        <br>
+        <label for="age">年齡: </label>
+        <input type="number" name="age">
+        <br>
+        <label for="major">學科: </label>
+        <input type="text" name="major">
+        <br>
+        <label for="merit">merit獎學金: </label>
+        <input type="number" name="merit">
+        <br>
+        <label for="other">other獎學金: </label>
+        <input type="number" name="other">
+        <br>
+        <button>新增學生</button>
+    </form>
+</body>
+<script src="./app.js"></script>
+</html>

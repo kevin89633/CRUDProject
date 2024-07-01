@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= foundStudent.name %>的頁面</title>
+    <meta name="author" content="SSAAKK">
+    <meta name="robots" content="index,follow">
+    <base target="_self">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        table, tr, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>學生ID</td>
+            <td><%= foundStudent.id %></td>
+        </tr>
+        <tr>
+            <td>姓名</td>
+            <td><%= foundStudent.name %></td>
+        </tr>
+        <tr>
+            <td>年齡</td>
+            <td><%= foundStudent.age %></td>
+        </tr>
+        <tr>
+            <td>學科</td>
+            <td><%= foundStudent.major %></td>
+        </tr>
+        <tr>
+            <td>merit獎學金</td>
+            <td><%= foundStudent.schlarship.merit %></td>
+        </tr>
+        <tr>
+            <td>other獎學金</td>
+            <td><%= foundStudent.schlarship.other %></td>
+        </tr>
+    </table>
+    <a href="/students">Home Page</a>
+    <a href="/students/<%= foundStudent.id %>/edit">修改資料</a>
+    <br>
+    <br>
+    <form method="POST" action="/students/<%= foundStudent.id %>?_method=DELETE">
+        <button type="submit">刪除此學生資料</button>
+      </form>
+</body>
+<script src="./app.js"></script>
+</html>

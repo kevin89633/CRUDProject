@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改學生資料</title>
+    <meta name="author" content="SSAAKK">
+    <meta name="robots" content="index,follow">
+    <base target="_self">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+<body>
+    <!-- 裝了method-override套件後, 在action裡面用_method=PUT,可以讓這個form提交的method變成PUT  -->
+    <form action="/students/<%= foundStudent.id %>?_method=PUT" method="post">
+        <label for="name">姓名: </label>
+        <input type="text" name="name" value="<%= foundStudent.name %>">
+        <br>
+        <label for="age">年齡: </label>
+        <input type="number" name="age" value="<%= foundStudent.age %>">
+        <br>
+        <label for="major">學科: </label>
+        <input type="text" name="major" value="<%= foundStudent.major %>">
+        <br>
+        <label for="merit">merit獎學金: </label>
+        <input type="number" name="merit" value="<%= foundStudent.schlarship.merit %>">
+        <br>
+        <label for="other">other獎學金: </label>
+        <input type="number" name="other" value="<%= foundStudent.schlarship.other %>">
+        <br>
+        <button>更新學生資料</button>
+    </form>
+</body>
+<script src="./app.js"></script>
+</html>
